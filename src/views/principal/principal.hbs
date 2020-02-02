@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-   <link rel="stylesheet" href="/src/public/css/main.css">
+  <link rel="stylesheet" href="/src/public/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</head>
-<body>
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"style=" background-color: #DA4453;
-    background: -webkit-linear-gradient(to top, #89216B, #DA4453);
-    background: linear-gradient(to top, #89216B, #DA4453);">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"style=" background-color: #DA4453; background: -webkit-linear-gradient(to top, #89216B, #DA4453); background: linear-gradient(to top, #89216B, #DA4453);">
     <a class="navbar-brand" href="#">biblioteca</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 60px; pading:100px; padding-left: 100px; padding-right: 100px;">
-    </div>
-    <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 60px; pading:100px; padding-left: 100px; padding-right: 100px;"></div>
+    <ul class="navbar-nav mr-auto" style="padding-right: 6%;">
       <li style="background: rgb(226,226,226); background: -moz-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(226,226,226)), color-stop(60%, rgb(168,166,168)), color-stop(62%, rgb(168,166,168)), color-stop(93%, rgb(105,93,105)), color-stop(100%, rgb(254,254,254))); background: -webkit-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -o-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -ms-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: radial-gradient(ellipse at center, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 ); Copy text; border-radius: 20px; border: 1px double #010846;" class="nav-item dropdown" >
         <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Usuarios
@@ -36,25 +30,57 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Eliminar</a>
           <a type="button" class="dropdown-item" data-target=".ModalMostarUsuarios"  data-toggle="modal">Mostrar</a>
-       
         </div>
       </li>
-    </ul>
-   
+      <div style = " width: 10px; "></div>     
+      <li style="background: rgb(226,226,226); background: -moz-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(226,226,226)), color-stop(60%, rgb(168,166,168)), color-stop(62%, rgb(168,166,168)), color-stop(93%, rgb(105,93,105)), color-stop(100%, rgb(254,254,254))); background: -webkit-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -o-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: -ms-radial-gradient(center, ellipse cover, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); background: radial-gradient(ellipse at center, rgb(226,226,226) 0%, rgb(168,166,168) 60%, rgb(168,166,168) 62%, rgb(105,93,105) 93%, rgb(254,254,254) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 ); Copy text; border-radius: 20px; border: 1px double #010846;" class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Libros
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #abbaab; background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab); background: linear-gradient(to bottom, #ffffff, #abbaab); border: 2px double #010846;">
+          <a type="button" class="dropdown-item" data-target=".ModalAgredarLibros"  data-toggle="modal">Agregar</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Modificar</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Eliminar</a>
+          <a type="button" class="dropdown-item" data-target=".ModalMostarLibros"  data-toggle="modal">Mostrar</a>
+        </div>
+      </li>
+    </ul>   
+  </nav>
+  <br>
+  {{#each guardadoLib}}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}  
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {{/each}}
 
-    <div class="modal fade ModalAgredarUsuarios" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">      
-        <div class="modal-content" >
-          <div class="modal-header"> 
-            <h1>usuarios</h1>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times; </span>
-            </button>
-          </div>
+  {{#each guardado}}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{text}}  
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {{/each}}
+
+
+  <div class="modal fade ModalAgredarUsuarios" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">      
+      <div class="modal-content" >
+        <div class="modal-header"> 
+          <h1>usuarios</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times; </span>
+          </button>
+        </div>
         <div class="modal-body">
         <form action="/usuario/nuevousuario" method="POST">
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <select name="tipo"style = "height: 37px; width: 200px;">
+          <select name="tipo" style = "height: 37px; width: 200px; border: 1px double #091bbe;">
             <option value="visitante">Visitante</option>
             <option value="Estudiante">Estudiante</option> 
             <option value="Docente"> Docente</option>
@@ -63,44 +89,60 @@
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="text" name="nombre" class="form-control " placeholder="Nombre">
+          <input type="text" style="border: 1px double #091bbe;" name="nombre" class="form-control " placeholder="Nombre">
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left; "></div>        
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input type="text" name="apellido" class="form-control " style="border: 1px double #091bbe;" placeholder="Apellido">
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="text" name="apellido" class="form-control " placeholder="Apellido">
-        </div>        
-        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="number" name="telefono" class="form-control " placeholder="Telefono">
+          <input type="number" name="telefono" class="form-control " placeholder="Telefono" style="border: 1px double #091bbe;">
         </div> 
-
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="number" name="numerocontrol" class="form-control " placeholder="Numero de Control" >
+          <input style="border: 1px double #091bbe;" type="number" name="numerocontrol" class="form-control " placeholder="Numero de Control" >
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-       
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <textarea name="escuelaProcedencia" class="form-control " placeholder="Escuela de Plocedencia" ></textarea>
+         <input type="text " name="escuelaProcedencia"style="border: 1px double #091bbe;" list="datalist1" placeholder="Escuela de Procedencia">
+          <datalist id="datalist1">
+          <option value="Universidad Vizcaya de las Americas">Universidad Vizcaya de las Americas</option>
+          <option value="Universidad Tecnológica de Manzanillo">Universidad Tecnológica de Manzanillo</option>
+          <option value="Universidad Multitécnica Profesional S.C.">Universidad Multitécnica Profesional S.C.</option>
+          <option value="Universidad ITECCE">Universidad ITECCE</option>
+          <option value="Universidad del Desarrollo Profesional">Universidad del Desarrollo Profesional</option>
+          <option value="Universidad de Colima Campus El Naranjo">Universidad de Colima Campus El Naranjo</option>
+          <option value="Facultad de Comercio Exterior">Facultad de Comercio Exterior</option>
+          <option value="Facultad de Turismo y Gastronomía">Facultad de Turismo y Gastronomía</option>
+          <option value="Instituto Universitario de Bellas Artes de Manzanillo">Instituto Universitario de Bellas Artes de Manzanillo</option>
+          <option value="Centro de Estudios Políticos y Constitucionales">Centro de Estudios Políticos y Constitucionales</option>
+          <option value="Centro de Estudios Profesionales de Colima">Centro de Estudios Profesionales de Colima</option>
+          <option value="Instituto del Potosí">Instituto del Potosí</option>
+          <option value="Bachilleratos Técnicos 23">Bachilleratos Técnicos 23</option>
+          <option value="Bachilleratos Técnicos 27">Bachilleratos Técnicos 27</option>
+          <option value="Universidad de Colima: Facultad de Contabilidad y Administracion de Manzanillo">Universidad de Colima: Facultad de Contabilidad y Administracion de Manzanillo</option>
+          <option value="Universidad de Colima Facultad de Ingeniería Electromecánica">Universidad de Colima Facultad de Ingeniería Electromecánica</option>
+          <option value="Centro Universitario de Investigaciones Oceanologicas CUNIVO">Centro Universitario de Investigaciones Oceanologicas CUNIVO</option>
+          <option value="Bachillerato Técnico No. 8, 9 y 10 Universidad de Colima">Bachillerato Técnico No. 8, 9 y 10 Universidad de Colima</option>
+          <option value="PRIMER COLEGIO DE MANZANILLO">PRIMER COLEGIO DE MANZANILLO</option>
+          </datalist>
+         </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input  style="border: 1px double #091bbe;" type="text" name="calle" class="form-control " placeholder="Calle" >
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="text" name="calle" class="form-control " placeholder="Calle" >
+          <input style="border: 1px double #091bbe;" type="number" name="numExt" class="form-control " placeholder="Numero Exterior" >
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="number" name="numExt" class="form-control " placeholder="Numero Exterior" >
+          <input style="border: 1px double #091bbe;" type="text" name="colonia" class="form-control " placeholder="Colonia">
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="text" name="colonia" class="form-control " placeholder="Colonia">
-        </div>        
-        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-
-        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-          <input type="number" name="cp" class="form-control " placeholder="Codigo Postal" >
+          <input style="border: 1px double #091bbe;" type="number" name="cp" class="form-control " placeholder="Codigo Postal" >
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
       </div>
@@ -109,93 +151,165 @@
         <button type="submit" class="btn btn-primary">Guardar datos</button>
       </div>
       </form>
+      </div>
     </div>
   </div>
 </div>
-   
-  </div>
-</nav>
-<br>
-{{#each guardado}}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-{{text}}  
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{{/each}}
 
+    <div class="modal fade ModalAgredarLibros" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">      
+        <div class="modal-content" >
+          <div class="modal-header"> 
+            <h1>Libros</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times; </span>
+            </button>
+          </div>
+        <div class="modal-body">
+        <form action="/libro/nuevouslibro" method="POST">
+        
 
-
-
-
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre">
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="text" name="autor" class="form-control " placeholder="Autor">
+        </div>
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>   
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <select style="border: 1px double #091bbe;" name="tipoLibro"style = "height: 37px; width: 200px;">
+            <option value="">Tipo de Libro</option>
+            <option value="texto">Texto</option>
+            <option value="consultaoreferencia">Consulta o Referencia</option> 
+            <option value="recreativos"> Recreativos</option>
+            <option value="instructivos">Instructivos</option>
+            <option value="científicos">Científicos</option>
+            <option value="literariosylingüísticos">Literarios y Lingüísticos</option>
+            <option value="iécnicos">Técnicos</option>
+            <option value="informativos">Informativos</option>
+            <option value="divulgación">Divulgación</option>
+            <option value="religiosos">Religiosos</option>
+            <option value="ilustrados">Ilustrados</option>
+            <option value="poéticos">Poéticos</option>
+            <option value="biográficos">Biográficos</option>
+           
+          </select>
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+          <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+            <input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial">
+          </div> 
+          <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+            <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+              <input style="border: 1px double #091bbe;" type="number" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" >
+            </div>        
+            <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+            <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar datos</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade ModalMostarLibros" tabindex="-1"  role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document" >      
+        <div class="modal-content" >
+          <div class="modal-header"> 
+            <h1>Libros</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times; </span>
+            </button>
+          </div>        
+          <div class="modal-body" style="border:1px solid; height:400px; width:auto; overflow-y:scroll; overflow-x:hidden;">
+            <div style="border:1px solid; overflow-x:scroll; overflow-y:hidden;">
+              <table  class="table table-bordered" >
+                <thead class="thead-dark " >
+                  <tr>
+                    <th >Nombre</th>
+                    <th >Autor</th>
+                    <th >Editorial</th>
+                    <th >Tipo</th>
+                    <th >No. Paginas</th>
+                    <th>Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each libros}}
+                  <tr>
+                    <td>{{nombreLibro}}</td>
+                    <td>{{autor}}</td>
+                    <td>{{editorialLibro}}</td>
+                    <td>{{tipoLibro}}</td>
+                    <td>{{numeroPaginas}}</td>
+                    <td>{{fecha}}</td>
+                  </tr>
+                {{/each}}    
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>    
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal fade ModalMostarUsuarios" tabindex="-1"  role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document" >      
         <div class="modal-content" >
           <div class="modal-header"> 
             <h1>usuarios</h1>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times; </span>
+              <span aria-hidden="true">&times;</span>
             </button>
-          </div>        <div class="modal-body" style="border:1px solid;
-        height:400px;
-        width:auto;
-        overflow-y:scroll;
-        overflow-x:hidden;
-        " >
-
-          <div style="border:1px solid;
-        overflow-x:scroll;
-        overflow-y:hidden;
-        ">
-        
-<table  class="table table-bordered" >
-  <thead class="thead-dark " >
-
-    <tr>
-      <th >Tipo</th>
-      <th >Telefono</th>
-      <th >Nombre</th>
-      <th >Apellido</th>
-      <th >No. Control</th>
-      <th >Escuela de Procedencia</th>
-      <th >Calle</th>
-      <th >Colonia</th>
-      <th >Numero exterior</th>
-      <th >Codigo Postal</th>
-     
-    </tr>
-  </thead>
-  
-  <tbody >
-    {{#each usuarios}}
-    <tr>
-      <td >{{tipo}}</td>
-      <td >{{telefono}}</td>
-      <td >{{nombre}}</td>
-      <td >{{apellido}}</td>
-      <td >{{numerocontrol}}</td>
-      <td >{{escuelaProcedencia}}</td>
-      <td >{{calle}}</td>
-      <td >{{colonia}}</td> 
-      <td >{{numExt}}</td>
-      <td >{{cp}}</td>
-     
-    </tr>
-{{/each}}    
-  </tbody>
-</table>
-
+            </div>        
+            <div class="modal-body" style="border:1px solid; height:400px; width:auto; overflow-y:scroll; overflow-x:hidden;" >
+              <div style="border:1px solid; overflow-x:scroll; overflow-y:hidden;">        
+                <table  class="table table-bordered" >
+                  <thead class="thead-dark " >
+                    <tr>
+                      <th >Tipo</th>
+                      <th >Telefono</th>
+                      <th >Nombre</th>
+                      <th >Apellido</th>
+                      <th >No. Control</th>
+                      <th >Escuela de Procedencia</th>
+                      <th >Calle</th>
+                      <th >Colonia</th>
+                      <th >Numero exterior</th>
+                      <th >Codigo Postal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#each usuarios}}
+                    <tr>
+                      <td>{{tipo}}</td>
+                      <td>{{telefono}}</td>
+                      <td>{{nombre}}</td>
+                      <td>{{apellido}}</td>
+                      <td>{{numerocontrol}}</td>
+                      <td>{{escuelaProcedencia}}</td>
+                      <td>{{calle}}</td>
+                      <td>{{colonia}}</td> 
+                      <td>{{numExt}}</td>
+                      <td>{{cp}}</td>
+                    </tr>
+                  {{/each}}    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
           </div>
-     
-   
-    </div>
-     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-        
+        </div>
       </div>
-  </div>
-</div>
-</div>
-</body>
+    </div>
+  </body>
 </html>
