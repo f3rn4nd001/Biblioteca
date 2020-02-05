@@ -167,8 +167,6 @@
           </div>
         <div class="modal-body">
         <form action="/libro/nuevouslibro" method="POST">
-        
-
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
           <input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre">
@@ -198,17 +196,17 @@
           </select>
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-          <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-            <input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial">
-          </div> 
-          <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-            <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
-              <input style="border: 1px double #091bbe;" type="number" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" >
-            </div>        
-            <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-            <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
-            </div>
-            <div class="modal-footer">
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial">
+        </div> 
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="number" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" >
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
+        </div>
+          <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
               <button type="submit" class="btn btn-primary">Guardar datos</button>
             </div>
@@ -226,11 +224,57 @@
               <span aria-hidden="true">&times; </span>
             </button>
           </div>        
+
+          <form action="/libro/buscarlibro" method="POST">
+            <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+            <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
+              <input style="border: 1px double #091bbe;" type="text" name="nombreLibroBuscar" class="form-control " placeholder="Nombre del libro">
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="text" name="autorBuscar" class="form-control " placeholder="Autor">
+        </div>
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>   
+        <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
+          <select style="border: 1px double #091bbe;" name="tipoLibroBuscar"style = "height: 50px; width: 200px;">
+            <option value="">Tipo de Libro</option>
+            <option value="texto">Texto</option>
+            <option value="consultaoreferencia">Consulta o Referencia</option> 
+            <option value="recreativos"> Recreativos</option>
+            <option value="instructivos">Instructivos</option>
+            <option value="científicos">Científicos</option>
+            <option value="literariosylingüísticos">Literarios y Lingüísticos</option>
+            <option value="iécnicos">Técnicos</option>
+            <option value="informativos">Informativos</option>
+            <option value="divulgación">Divulgación</option>
+            <option value="religiosos">Religiosos</option>
+            <option value="ilustrados">Ilustrados</option>
+            <option value="poéticos">Poéticos</option>
+            <option value="biográficos">Biográficos</option>
+           
+          </select>
+        </div>        
+       <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+       <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial">
+        </div> 
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
+          <input style="border: 1px double #091bbe;" type="number" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" >
+        </div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
+        
+              <button type="submit" class="btn btn-primary">Buscar</button>    
+        </form>
+
           <div class="modal-body" style="border:1px solid; height:400px; width:auto; overflow-y:scroll; overflow-x:hidden;">
             <div style="border:1px solid; overflow-x:scroll; overflow-y:hidden;">
               <table  class="table table-bordered" >
                 <thead class="thead-dark " >
                   <tr>
+                    <th>ID</th>
                     <th >Nombre</th>
                     <th >Autor</th>
                     <th >Editorial</th>
@@ -241,7 +285,8 @@
                 </thead>
                 <tbody>
                   {{#each libros}}
-                  <tr>
+                  <tr>       
+                    <td>{{id}}</td>
                     <td>{{nombreLibro}}</td>
                     <td>{{autor}}</td>
                     <td>{{editorialLibro}}</td>

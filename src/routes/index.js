@@ -61,6 +61,40 @@ router.post('/usuario/nuevousuario', async(req, res) => {
     };
 });
 
+
+router.post('/libro/buscarlibro', async(req, res) => {
+    console.log(req.body);
+    const { nombreLibroBuscar, autorBuscar, tipoLibroBuscar } = req.body;
+    if (nombreLibroBuscar) {
+        const libros = await Libro.find().sort({ nombreLibro: 'desc' }).where('nombreLibro').equals(nombreLibroBuscar);
+        res.render('principal/principal', {
+            libros
+        });
+    }
+    if (autorBuscar) {
+        const libros = await Libro.find().sort({ autor: 'desc' }).where('autor').equals(autorBuscar);
+        res.render('principal/principal', {
+            libros
+        });
+    }
+    if (tipoLibroBuscar) {
+        const libros = await Libro.find().sort({ tipoLibro: 'desc' }).where('autor').equals(tipoLibroBuscar);
+        res.render('principal/principal', {
+            libros
+        });
+    } else {
+        const libros = await Libro.find().sort({ autor: 'desc' });
+        res.render('principal/principal', {
+            libros
+        });
+
+    }
+
+});
+
+
+
+
 router.post('/libro/nuevouslibro', async(req, res) => {
     console.log(req.body);
     const { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas } = req.body;
