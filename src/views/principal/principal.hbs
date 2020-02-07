@@ -20,7 +20,7 @@
 }
 
 body{
-  background: #1D1F20;
+  background: rgb(23, 21, 56);
 }
 
 .wrap{
@@ -40,6 +40,7 @@ body{
 	margin: 10px;
 	-webkit-perspective: 800;
 	perspective: 800;
+  
 }
 
 .tarjeta{
@@ -53,7 +54,7 @@ body{
 	transition: .7s ease;
 	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-
+ border-radius: 200px; border: 5px double #010846;
 }
 
 .adelante, .atras{
@@ -64,6 +65,7 @@ body{
 	left: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+   border-radius: 200px; border: 1px double #010846;
 }
 
 .adelante{
@@ -100,19 +102,26 @@ body{
 }
 
 .card1{
-	background-image: url(http://1.1m.yt/J9Kw7kl.jpg);
+	background-image: url(https://cnnespanol2.files.wordpress.com/2019/12/s_64a163f16ecbb099e52f2f8271f73cbbfcfc9034be4d646f7375e4db1ca6f3d7_1573501883482_ap_19001106049831-1.jpg?quality=100&strip=info&w=940&h=530&crop=1);
 	background-size: cover;
+  border-radius: 200px; border: 1px double #010846;
 }
-
 .card2{
-	background-image: url(http://1.1m.yt/dlxMf3R.jpg);
+	background-image: url(https://cnnespanol2.files.wordpress.com/2019/12/s_64a163f16ecbb099e52f2f8271f73cbbfcfc9034be4d646f7375e4db1ca6f3d7_1573501883482_ap_19001106049831-1.jpg?quality=100&strip=info&w=940&h=530&crop=1);
 	background-size: cover;
+   border-radius: 200px; border: 1px double #010846;
+}
+.card3{
+	background-image: url(https://cnnespanol2.files.wordpress.com/2019/12/s_64a163f16ecbb099e52f2f8271f73cbbfcfc9034be4d646f7375e4db1ca6f3d7_1573501883482_ap_19001106049831-1.jpg?quality=100&strip=info&w=940&h=530&crop=1);
+	background-size: cover;
+   border-radius: 200px; border: 1px double #010846;
+}
+.card4{
+	background-image: url(https://cnnespanol2.files.wordpress.com/2019/12/s_64a163f16ecbb099e52f2f8271f73cbbfcfc9034be4d646f7375e4db1ca6f3d7_1573501883482_ap_19001106049831-1.jpg?quality=100&strip=info&w=940&h=530&crop=1);
+	background-size: cover;
+  border-radius: 200px; border: 1px double #010846;
 }
 
-.card3{
-	background-image: url(http://3.1m.yt/EUB_xE.jpg);
-	background-size: cover;
-}
   </style>
   </head>
   <body>
@@ -130,9 +139,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #abbaab; background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab); background: linear-gradient(to bottom, #ffffff, #abbaab); border: 2px double #010846;">
           <a type="button" class="dropdown-item" data-target=".ModalAgredarUsuarios"  data-toggle="modal">Agregar</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Eliminar</a>
           <a type="button" class="dropdown-item" data-target=".ModalMostarUsuarios"  data-toggle="modal">Mostrar</a>
         </div>
       </li>
@@ -144,9 +150,6 @@ body{
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #abbaab; background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab); background: linear-gradient(to bottom, #ffffff, #abbaab); border: 2px double #010846;">
           <a type="button" class="dropdown-item" data-target=".ModalAgredarLibros"  data-toggle="modal">Agregar</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Eliminar</a>
           <a type="button" class="dropdown-item" data-target=".ModalMostarLibros"  data-toggle="modal">Mostrar</a>
         </div>
       </li>
@@ -340,7 +343,7 @@ body{
         </div>
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>   
         <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
-          <select style="border: 1px double #091bbe;" name="tipoLibroBuscar"style = "height: 50px; width: 200px;">
+          <select style="border: 1px double #091bbe;" name="tipoLibroBuscar">
             <option value="">Tipo de Libro</option>
             <option value="texto">Texto</option>
             <option value="consultaoreferencia">Consulta o Referencia</option> 
@@ -359,18 +362,14 @@ body{
           </select>
         </div>        
        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-       <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
         <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
-          <input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial">
+          <input style="border: 1px double #091bbe;" type="text" name="editorialLibroBuscar" class="form-control " placeholder="Editorial">
         </div> 
-        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-        <div style = "height: 50px; width: 190px; border: 4px; float: left; ">
-          <input style="border: 1px double #091bbe;" type="number" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" >
-        </div>        
-        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
-        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>             
+              
+        <div style = "height: 50px; width: 10%; border: 4px; float: left;"></div>        
+        <div style = "height: 50px; width: 10%; border: 4px; float: left;"></div>             
         
-              <button type="submit" class="btn btn-primary">Buscar</button>    
+          <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
 
           <div class="modal-body" style="border:1px solid; height:400px; width:auto; overflow-y:scroll; overflow-x:hidden;">
@@ -378,18 +377,20 @@ body{
               <table  class="table table-bordered" >
                 <thead class="thead-dark " >
                   <tr>
+                    <th></th>
                     <th>ID</th>
                     <th >Nombre</th>
                     <th >Autor</th>
                     <th >Editorial</th>
                     <th >Tipo</th>
                     <th >No. Paginas</th>
-                    <th>Fecha</th>
+                    <th>Fecha de registro</th>
                   </tr>
                 </thead>
                 <tbody>
                   {{#each libros}}
-                  <tr>       
+                  <tr> 
+                    <td><a href="/libros/editar/{{id}}" style=" font-size: 17px;  letter-spacing: 3px;">editar</a></td>
                     <td>{{id}}</td>
                     <td>{{nombreLibro}}</td>
                     <td>{{autor}}</td>
@@ -398,6 +399,8 @@ body{
                     <td>{{numeroPaginas}}</td>
                     <td>{{fecha}}</td>
                   </tr>
+                  {{else}}
+                  <h1>la tabla libros esta basia</h1>
                 {{/each}}    
                 </tbody>
               </table>
@@ -449,6 +452,8 @@ body{
                       <td>{{numExt}}</td>
                       <td>{{cp}}</td>
                     </tr>
+                        {{else}}
+                  <h1>La tabra usuarios esta basia</h1>
                   {{/each}}    
                   </tbody>
                 </table>
@@ -484,7 +489,7 @@ body{
 		
     <div class="tarjeta-wrap">
 			<div class="tarjeta">
-				<div class="adelante card3"></div>
+				<div class="adelante card4"></div>
 				<div class="atras">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
 				</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/public/css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <style>
+    html, body {
+  background: rgb(17, 23, 65);
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact-fp-wrap {
+  height: 60px;
+	margin: 0 auto;
+  position: relative;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 640px;
+}
+
+.booton {
+  fill: transparent;
+  stroke-dasharray: 120 245;
+  stroke-dashoffset: -474;
+  stroke-width: 10px;
+  stroke: url('#logo-gradient');
+}
+
+.booton-text {
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 28px;
+  letter-spacing: 7px;
+  line-height: 30px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 340 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.contact-fp-wrap:hover .booton {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+.page-foot-column {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  padding: 1em;
+  font-family: Lato;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+  </style>
+  </head>
+  
+    <body>
+        <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
+            <table  class="table table-bordered" >
+                <thead class="thead-dark " >
+                    <tr>
+                        <th >Nombre</th>
+                        <th >Autor</th>
+                        <th >Editorial</th>
+                        <th >Tipo</th>
+                        <th >No. Paginas</th>
+                    </tr>
+                </thead>
+                <tbody>                
+                  <tr> 
+                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.nombreLibro}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.autor}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.editorialLibro}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.tipoLibro}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.numeroPaginas}}"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="contact-fp-wrap">
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="60%" y1="0%" x2="95%" y2="100%" > 
+                            <stop offset="0%" stop-color="#F79533">
+                                <animate attributeName="stop-color" values="#F79533; #F37055; #EF4E7B; #A166AB; #5073B8; #1098AD; #07B39B; #6DBA82; #F79533" dur="4s" repeatCount="indefinite"></animate>
+                            </stop>
+                            <stop offset="100%" stop-color="#F79533">
+                                <animate attributeName="stop-color" values="#F37055; #EF4E7B; #A166AB; #5073B8; #1098AD; #07B39B; #6DBA82; #F79533; #F37055" dur="4s" repeatCount="indefinite"></animate>
+                            </stop>
+                        </linearGradient> 
+                    </defs>
+                    <rect class="booton" height="60" width="320" />
+                </svg>
+                <a href="/principal"><div class="booton-text">Guardar Cambios</div></a>
+            </div>
+    </body>
+</html>

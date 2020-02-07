@@ -61,10 +61,15 @@ router.post('/usuario/nuevousuario', async(req, res) => {
     };
 });
 
+router.get('/libros/editar/:id', async(req, res) => {
+    const librosmod = await Libro.findById(req.params.id);
+    res.render('principal/editarLibros', { librosmod });
+
+});
 
 router.post('/libro/buscarlibro', async(req, res) => {
     console.log(req.body);
-    const { nombreLibroBuscar, autorBuscar, tipoLibroBuscar } = req.body;
+    const { nombreLibroBuscar, autorBuscar, tipoLibroBuscar, editorialLibroBuscar } = req.body;
     if (nombreLibroBuscar) {
         const libros = await Libro.find().sort({ nombreLibro: 'desc' }).where('nombreLibro').equals(nombreLibroBuscar);
         res.render('principal/principal', {
@@ -77,8 +82,14 @@ router.post('/libro/buscarlibro', async(req, res) => {
             libros
         });
     }
+    if (editorialLibroBuscar) {
+        const libros = await Libro.find().sort({ editorialLibro: 'desc' }).where('editorialLibro').equals(editorialLibroBuscar);
+        res.render('principal/principal', {
+            libros
+        });
+    }
     if (tipoLibroBuscar) {
-        const libros = await Libro.find().sort({ tipoLibro: 'desc' }).where('autor').equals(tipoLibroBuscar);
+        const libros = await Libro.find().sort({ tipoLibro: 'desc' }).where('tipoLibro').equals(tipoLibroBuscar);
         res.render('principal/principal', {
             libros
         });
