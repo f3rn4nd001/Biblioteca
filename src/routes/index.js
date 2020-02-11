@@ -53,18 +53,41 @@ router.post('/usuario/nuevousuario', async(req, res) => {
         console.log(usuarioNuevo);
         await usuarioNuevo.save();
         const usuarios = await Usuario.find().sort({ nombre: 'desc' });
-
+        const libros = await Libro.find().sort({ nombreLibro: 'desc' });
         res.render('principal/principal', {
             usuarios,
+            libros,
             guardado,
         });
     };
 });
 
+router.delete('/usuarios/eliminar/:id', async(req, res) => {
+    await Usuario.findByIdAndDelete(req.params.id);
+    res.redirect('/principal');
+});
+
+router.put('/usuarios/editar/:id', async(req, res) => {
+    const { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas } = req.body;
+    await Libro.findByIdAndUpdate(req.params.id, { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas });
+    res.redirect('/principal');
+});
+
+
+router.delete('/libros/eliminar/:id', async(req, res) => {
+    await Libro.findByIdAndDelete(req.params.id);
+    res.redirect('/principal');
+});
+
+router.put('/libros/editar-libro/:id', async(req, res) => {
+    const { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas } = req.body;
+    await Libro.findByIdAndUpdate(req.params.id, { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas });
+    res.redirect('/principal');
+});
+
 router.get('/libros/editar/:id', async(req, res) => {
     const librosmod = await Libro.findById(req.params.id);
     res.render('principal/editarLibros', { librosmod });
-
 });
 
 router.post('/libro/buscarlibro', async(req, res) => {
@@ -135,10 +158,11 @@ router.post('/libro/nuevouslibro', async(req, res) => {
         const libroNuevo = new Libro({ nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas });
         console.log(libroNuevo);
         await libroNuevo.save();
+        const usuarios = await Usuario.find().sort({ nombre: 'desc' });
         const libros = await Libro.find().sort({ nombreLibro: 'desc' });
-
         res.render('principal/principal', {
             libros,
+            usuarios,
             guardadoLib,
         });
     };

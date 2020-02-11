@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const session = require('express-session')
@@ -18,6 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 app.use('/assets', express.static(__dirname + '/public'));
 
 

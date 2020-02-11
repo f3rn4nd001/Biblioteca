@@ -19,7 +19,7 @@
 }
 
 .contact-fp-wrap {
-  height: 60px;
+  height: 0px;
 	margin: 0 auto;
   position: relative;
   top: 20%;
@@ -71,6 +71,14 @@
   font-family: Lato;
 }
 
+button {
+  background-color: inherit;
+  border-color: inherit;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
 a {
   color: inherit;
   text-decoration: none;
@@ -84,6 +92,8 @@ a {
   </head>
   
     <body>
+      <form action="/libros/editar-libro/{{librosmod._id}}?_method=PUT" method="POST" >
+      <input type="hidden" name="_method" value="PUT"> 
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
             <table  class="table table-bordered" >
                 <thead class="thead-dark " >
@@ -98,13 +108,32 @@ a {
                 <tbody>                
                   <tr> 
                     <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.nombreLibro}}"></td>
-                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.autor}}"></td>
-                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.editorialLibro}}"></td>
-                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.tipoLibro}}"></td>
-                    <td><input style="border: 1px double #091bbe;" type="text" name="nombreLibro" class="form-control " placeholder="Nombre" value="{{librosmod.numeroPaginas}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="autor" class="form-control " placeholder="autor" value="{{librosmod.autor}}"></td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="editorialLibro" class="form-control " placeholder="Editorial" value="{{librosmod.editorialLibro}}"></td>
+                    <td> 
+                      <input style="border: 1px double #091bbe;" type="text" name="tipoLibro" class="form-control " list="LtipoLibro" placeholder="Tipo de libro" value="{{librosmod.tipoLibro}}">     
+                        <datalist id="LtipoLibro">
+                        <option value="Texto">Texto</option>
+                        <option value="Consulta o Referencia">Consulta o Referencia</option> 
+                        <option value="Recreativos"> Recreativos</option>
+                        <option value="Instructivos">Instructivos</option>
+                        <option value="Científicos">Científicos</option>
+                        <option value="Literarios y Lingüísticos">Literarios y Lingüísticos</option>
+                        <option value="Técnicos">Técnicos</option>
+                        <option value="Informativos">Informativos</option>
+                        <option value="Divulgación">Divulgación</option>
+                        <option value="Religiosos">Religiosos</option>
+                        <option value="Ilustrados">Ilustrados</option>
+                        <option value="Poéticos">Poéticos</option>
+                        <option value="Biográficos">Biográficos</option>
+                      </datalist>
+                    </td>
+                    <td><input style="border: 1px double #091bbe;" type="text" name="numeroPaginas" class="form-control " placeholder="Numero de Paginas" value="{{librosmod.numeroPaginas}}" ></td>
+           
                   </tr>
                 </tbody>
               </table>
+            
               <div class="contact-fp-wrap">
                 <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -119,7 +148,8 @@ a {
                     </defs>
                     <rect class="booton" height="60" width="320" />
                 </svg>
-                <a href="/principal"><div class="booton-text">Guardar Cambios</div></a>
+                <a ><div class="booton-text">  <button type="submit">Guardar Cambios</button></div></a>
             </div>
+            </form>
     </body>
 </html>

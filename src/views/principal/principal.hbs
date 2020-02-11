@@ -286,20 +286,19 @@ body{
         <div style = "height: 50px; width: 200px; border: 4px; float: left; ">
           <select style="border: 1px double #091bbe;" name="tipoLibro"style = "height: 37px; width: 200px;">
             <option value="">Tipo de Libro</option>
-            <option value="texto">Texto</option>
-            <option value="consultaoreferencia">Consulta o Referencia</option> 
-            <option value="recreativos"> Recreativos</option>
-            <option value="instructivos">Instructivos</option>
-            <option value="científicos">Científicos</option>
-            <option value="literariosylingüísticos">Literarios y Lingüísticos</option>
-            <option value="iécnicos">Técnicos</option>
-            <option value="informativos">Informativos</option>
-            <option value="divulgación">Divulgación</option>
-            <option value="religiosos">Religiosos</option>
-            <option value="ilustrados">Ilustrados</option>
-            <option value="poéticos">Poéticos</option>
-            <option value="biográficos">Biográficos</option>
-           
+            <option value="Texto">Texto</option>
+              <option value="Consulta o Referencia">Consulta o Referencia</option> 
+              <option value="Recreativos"> Recreativos</option>
+              <option value="Instructivos">Instructivos</option>
+              <option value="Científicos">Científicos</option>
+              <option value="Literarios y Lingüísticos">Literarios y Lingüísticos</option>
+              <option value="Técnicos">Técnicos</option>
+              <option value="Informativos">Informativos</option>
+              <option value="Divulgación">Divulgación</option>
+              <option value="Religiosos">Religiosos</option>
+              <option value="Ilustrados">Ilustrados</option>
+              <option value="Poéticos">Poéticos</option>
+              <option value="Biográficos">Biográficos</option>
           </select>
         </div>        
         <div style = "height: 50px; width: 10px; border: 4px; float: left;"></div>        
@@ -378,7 +377,6 @@ body{
                 <thead class="thead-dark " >
                   <tr>
                     <th></th>
-                    <th>ID</th>
                     <th >Nombre</th>
                     <th >Autor</th>
                     <th >Editorial</th>
@@ -390,8 +388,15 @@ body{
                 <tbody>
                   {{#each libros}}
                   <tr> 
-                    <td><a href="/libros/editar/{{id}}" style=" font-size: 17px;  letter-spacing: 3px;">editar</a></td>
-                    <td>{{id}}</td>
+                    <td>
+                                   
+                        <a href="/libros/editar/{{id}}" style=" font-size: 15px;  letter-spacing: 3px; "><button>Editar</button></a>
+                         <br>
+                         <form action="/libros/eliminar/{{id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button style=" font-size: 15px;  letter-spacing: 1px;" type="submit">Eliminar</button>
+                         </form>
+                   </td>
                     <td>{{nombreLibro}}</td>
                     <td>{{autor}}</td>
                     <td>{{editorialLibro}}</td>
@@ -426,6 +431,7 @@ body{
                 <table  class="table table-bordered" >
                   <thead class="thead-dark " >
                     <tr>
+                      <th></th>
                       <th >Tipo</th>
                       <th >Telefono</th>
                       <th >Nombre</th>
@@ -441,6 +447,14 @@ body{
                   <tbody>
                   {{#each usuarios}}
                     <tr>
+                        <td>        
+                        <a href="/usuarios/editar/{{id}}" style=" font-size: 15px;  letter-spacing: 3px; "><button>Editar</button></a>
+                         <br>
+                         <form action="/usuarios/eliminar/{{id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button style=" font-size: 15px;  letter-spacing: 1px;" type="submit">Eliminar</button>
+                         </form>
+                   </td>
                       <td>{{tipo}}</td>
                       <td>{{telefono}}</td>
                       <td>{{nombre}}</td>
