@@ -84,7 +84,6 @@ router.put('/libros/editar-libro/:id', async(req, res) => {
     await Libro.findByIdAndUpdate(req.params.id, { nombreLibro, autor, editorialLibro, tipoLibro, numeroPaginas });
     res.redirect('/principal');
 });
-
 router.get('/libros/editar/:id', async(req, res) => {
     const librosmod = await Libro.findById(req.params.id);
     res.render('principal/editarLibros', { librosmod });
